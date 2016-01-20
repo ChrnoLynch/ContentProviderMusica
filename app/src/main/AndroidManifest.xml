@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.lprub.musica">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <provider
+            android:name=".ProveedorMusic"
+            android:authorities="com.example.lprub.musica.ProveedorMusic"
+            android:exported="false" />
+
+        <activity
+            android:name=".actividades.Principal"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".actividades.SingleAlbum"
+            android:label="@string/title_activity_single_album"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".actividades.MultiAlbum"
+            android:label="@string/title_activity_multi_album"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+    </application>
+
+</manifest>
