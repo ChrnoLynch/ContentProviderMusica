@@ -195,7 +195,7 @@ public class ProveedorMusic extends ContentProvider {
             case CANCIONES:
                 // Consultando todos los registros
                 c = db.query(ContratoMusic.TablaCancion.TABLACANCION, projection, selection, selectionArgs, null, null, sortOrder);
-                Log.v("Camino", "nos hemos metido por el camino del case CLIENTE_ID");
+                
                 break;
             case IDCANCION:
                 // Consultando un solo registro basado en el Id del Uri
@@ -211,7 +211,7 @@ public class ProveedorMusic extends ContentProvider {
                     String s="Select * from album LEFT JOIN artista ON (album.artist_id = artista._id) order by album";
                     c=db.rawQuery(s,null);
                 }
-                Log.v("Camino", "nos hemos metido por el camino del case CLIENTE_ID");
+                
                 break;
             case IDALBUM:
                 // Consultando un solo registro basado en el Id del Uri
@@ -222,7 +222,7 @@ public class ProveedorMusic extends ContentProvider {
             case ARTISTA:
                 // Consultando todos los registros
                 c = db.query(ContratoMusic.TablaArtista.TABLAARTISTA, projection, selection, selectionArgs, null, null, sortOrder);
-                Log.v("Camino", "nos hemos metido por el camino del case CLIENTE_ID");
+                
                 break;
             case IDARTISTA:
                 // Consultando un solo registro basado en el Id del Uri
